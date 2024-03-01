@@ -58,8 +58,8 @@ $(function () {
 
     const resetGame = () => {
         setTimeout(() => {
-            $('img').each(function () {
-                $(this).removeAttr('src');
+            $('img').each((_, img) => {
+                $(img).removeAttr('src');
             });
 
             currentPlayer = '1';
