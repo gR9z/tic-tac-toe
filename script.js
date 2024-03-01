@@ -4,7 +4,7 @@ $(document).ready(function () {
     const player2img = 'rond.png';
 
     let currentPlayer = '1';
-    let gameInProgress = true;
+    let isGameInProgress = true;
     let moveCounter = 0;
 
     const setPlayerSymbol = (index) => {
@@ -33,7 +33,7 @@ $(document).ready(function () {
             );
 
             if (a && a === b && a === c) {
-                gameInProgress = false;
+                isGameInProgress = false;
                 return true;
             }
         }
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     const checkDraw = () => {
         if (moveCounter === 9) {
-            gameInProgress = false;
+            isGameInProgress = false;
             return true;
         }
 
@@ -68,7 +68,7 @@ $(document).ready(function () {
             $('joueur').text(currentPlayer);
             $('#info-game').remove();
 
-            gameInProgress = true;
+            isGameInProgress = true;
         }, 3000);
     };
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
     };
 
     $('img').on('click', (e) => {
-        if (!gameInProgress) return;
+        if (!isGameInProgress) return;
 
         const imageID = $(e.target).attr('id');
         const imgSrc = $(e.target).attr('src');
