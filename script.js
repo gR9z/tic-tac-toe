@@ -77,7 +77,7 @@ $(function () {
         $('joueur').text(currentPlayer);
     };
 
-    $('img').on('click', (e) => {
+    $('table').on('click', 'img', (e) => {
         if (!isGameInProgress) return;
 
         const imageID = $(e.target).attr('id');
