@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     const IMAGES_SRC = '/assets/images';
     const player1img = 'croix.png';
     const player2img = 'rond.png';
