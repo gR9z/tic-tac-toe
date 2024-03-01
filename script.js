@@ -7,7 +7,7 @@ $(document).ready(function () {
     let isGameInProgress = true;
     let moveCounter = 0;
 
-    const setPlayerSymbol = (index) => {
+    const setPlayerImage = (index) => {
         const imageSrc = currentPlayer === '1' ? player1img : player2img;
 
         $(`#${index}`).attr('src', `${IMAGES_SRC}/${imageSrc}`);
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
         if (imgSrc) return;
 
-        setPlayerSymbol(imageID);
+        setPlayerImage(imageID);
         moveCounter++;
 
         if (checkWin()) {
