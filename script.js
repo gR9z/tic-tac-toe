@@ -1,5 +1,5 @@
 $(function () {
-    const IMAGES_SRC = '/assets/images';
+    const IMAGES_PATH = '/assets/images';
     const player1img = 'croix.png';
     const player2img = 'rond.png';
 
@@ -10,7 +10,7 @@ $(function () {
     const setPlayerImage = (index) => {
         const imageSrc = currentPlayer === '1' ? player1img : player2img;
 
-        $(`#${index}`).attr('src', `${IMAGES_SRC}/${imageSrc}`);
+        $(`#${index}`).attr('src', `${IMAGES_PATH}/${imageSrc}`);
     };
 
     const checkWin = () => {
