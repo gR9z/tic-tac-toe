@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const IMAGE_SRC = '/assets/images';
+    const IMAGES_SRC = '/assets/images';
     const player1img = 'croix.png';
     const player2img = 'rond.png';
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
     const updateCell = (index) => {
         const imageSrc = currentPlayer === '1' ? player1img : player2img;
 
-        $(`#${index}`).attr('src', `${IMAGE_SRC}/${imageSrc}`);
+        $(`#${index}`).attr('src', `${IMAGES_SRC}/${imageSrc}`);
     };
 
     const checkWin = () => {
@@ -66,7 +66,6 @@ $(document).ready(function () {
             moveCounter = 0;
 
             $('joueur').text(currentPlayer);
-
             $('#info-game').remove();
 
             gameInProgress = true;
@@ -96,7 +95,7 @@ $(document).ready(function () {
             );
             resetGame();
         } else if (checkDraw()) {
-            displayEndGameMessage(`It's a draw!`, 'orange');
+            displayEndGameMessage("It's a draw!", 'orange');
             resetGame();
         } else {
             changePlayer();
